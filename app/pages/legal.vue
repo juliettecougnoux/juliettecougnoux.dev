@@ -154,13 +154,19 @@ const legalData = computed(() => {
     return locale.value === 'fr' ? legalContentFr : legalContentEn
 })
 
-const decodeContact = (encoded) => {
-    return atob(encoded)
+const reconstructContact = (parts) => {
+    if (!parts || !parts.parts) return ''
+    return parts.parts.join('').split('').reverse().join('').split('').reverse().join('')
 }
 
-const decodedEmail = computed(() => decodeContact(legalData.value.publisher.email))
-const decodedPhone = computed(() => decodeContact(legalData.value.publisher.phone))
-const decodedContactEmail = computed(() => decodeContact(legalData.value.contactLegal.email))
+const reconstructPhoneDisplay = (parts) => {
+    if (!parts || !parts.parts) return ''
+    return parts.parts.join(' ')
+}
+
+const decodedEmail = computed(() => reconstructContact(legalData.value.publisher.email))
+const decodedPhone = computed(() => reconstructPhoneDisplay(legalData.value.publisher.phone))
+const decodedContactEmail = computed(() => reconstructContact(legalData.value.contactLegal.email))
 
 useHead({
     title: 'Mentions Légales - Juliette Cougnoux',

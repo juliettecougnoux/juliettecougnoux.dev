@@ -2,8 +2,8 @@ export const legalContent = {
   publisher: {
     name: "Juliette Cougnoux",
     role: "Développeuse Backend indépendante",
-    email: "amNvdWdub3V4QGdtYWlsLmNvbQ==",
-    phone: "MDYgMTAgMTAgNjMgNTg=",
+    email: { parts: ["jcou", "gnoux", "@gm", "ail.", "com"] },
+    phone: { parts: ["06", "10", "10", "63", "58"] },
   },
   hosting: {
     company: "Hostinger International Ltd.",
@@ -53,6 +53,6 @@ export const legalContent = {
   contactLegal: {
     intro:
       "Pour toute question concernant ces mentions légales ou vos données personnelles :",
-    email: "amNvdWdub3V4QGdtYWlsLmNvbQ==",
+    email: { parts: ["jcou", "gnoux", "@gm", "ail.", "com"] },
   },
 };

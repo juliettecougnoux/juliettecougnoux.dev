@@ -103,19 +103,32 @@
 <script setup lang="ts">
 const { t: $t } = useI18n()
 
-const decodeContact = (encoded: string): string => {
-    return atob(encoded)
+const reconstructEmail = (): string => {
+    const parts = ['jcou', 'gnoux', '@gm', 'ail.', 'com']
+    return parts.join('').split('').reverse().join('').split('').reverse().join('')
 }
 
-const emailEncoded = 'amNvdWdub3V4QGdtYWlsLmNvbQ=='
-const phoneEncoded = 'KzMzNjEwMTA2MzU4'
-const phoneDisplayEncoded = 'MDYgMTAgMTAgNjMgNTg='
+const reconstructPhone = (): string => {
+    const digits = ['+33', '6', '10', '10', '63', '58']
+    return digits.join('')
+}
 
-const displayEmail = computed(() => decodeContact(emailEncoded))
-const displayPhone = computed(() => decodeContact(phoneDisplayEncoded))
+const reconstructPhoneDisplay = (): string => {
+    const parts = ['06', '10', '10', '63', '58']
+    return parts.join(' ')
+}
 
-const emailHref = computed(() => `mailto:${decodeContact(emailEncoded)}`)
-const phoneHref = computed(() => `tel:${decodeContact(phoneEncoded)}`)
+const displayEmail = computed(() => reconstructEmail())
+const displayPhone = computed(() => reconstructPhoneDisplay())
+
+const emailHref = computed(() => {
+    const user = ['j', 'c', 'o', 'u', 'g', 'n', 'o', 'u', 'x'].join('')
+    const domain = ['g', 'm', 'a', 'i', 'l'].join('')
+    const tld = ['c', 'o', 'm'].join('')
+    return `mailto:${user}@${domain}.${tld}`
+})
+
+const phoneHref = computed(() => `tel:${reconstructPhone()}`)
 
 const handleEmailClick = () => {
     window.location.href = emailHref.value
