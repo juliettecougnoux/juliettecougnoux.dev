@@ -21,8 +21,8 @@
                 </div>
 
                 <div class="grid gap-6">
-                    <a href="mailto:jcougnoux@gmail.com"
-                        class="flex items-center gap-4 p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgba(158,153,255,0.3)] hover:shadow-[0_12px_40px_rgba(158,153,255,0.5)] transition-all duration-300 hover:-translate-y-2 group">
+                    <a :href="emailHref" @click.prevent="handleEmailClick"
+                        class="flex items-center gap-4 p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgba(158,153,255,0.3)] hover:shadow-[0_12px_40px_rgba(158,153,255,0.5)] transition-all duration-300 hover:-translate-y-2 group cursor-pointer">
                         <div
                             class="w-14 h-14 rounded-full bg-primary-purple/10 flex items-center justify-center group-hover:bg-primary-purple group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -32,12 +32,12 @@
                         </div>
                         <div>
                             <h3 class="font-semibold text-primary-dark text-lg">{{ $t('contact.email') }}</h3>
-                            <p class="text-primary-dark/70 font-light">jcougnoux@gmail.com</p>
+                            <p class="text-primary-dark/70 font-light">{{ displayEmail }}</p>
                         </div>
                     </a>
 
-                    <a href="tel:+33610106358"
-                        class="flex items-center gap-4 p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgba(170,255,153,0.3)] hover:shadow-[0_12px_40px_rgba(170,255,153,0.5)] transition-all duration-300 hover:-translate-y-2 group">
+                    <a :href="phoneHref" @click.prevent="handlePhoneClick"
+                        class="flex items-center gap-4 p-6 bg-white rounded-3xl shadow-[0_8px_30px_rgba(170,255,153,0.3)] hover:shadow-[0_12px_40px_rgba(170,255,153,0.5)] transition-all duration-300 hover:-translate-y-2 group cursor-pointer">
                         <div
                             class="w-14 h-14 rounded-full bg-primary-green/10 flex items-center justify-center group-hover:bg-primary-green group-hover:text-white transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -47,7 +47,7 @@
                         </div>
                         <div>
                             <h3 class="font-semibold text-primary-dark text-lg">{{ $t('contact.phone') }}</h3>
-                            <p class="text-primary-dark/70 font-light">06 10 10 63 58</p>
+                            <p class="text-primary-dark/70 font-light">{{ displayPhone }}</p>
                         </div>
                     </a>
 
@@ -102,4 +102,26 @@
 </template>
 <script setup lang="ts">
 const { t: $t } = useI18n()
+
+const decodeContact = (encoded: string): string => {
+    return atob(encoded)
+}
+
+const emailEncoded = 'amNvdWdub3V4QGdtYWlsLmNvbQ=='
+const phoneEncoded = 'KzMzNjEwMTA2MzU4'
+const phoneDisplayEncoded = 'MDYgMTAgMTAgNjMgNTg='
+
+const displayEmail = computed(() => decodeContact(emailEncoded))
+const displayPhone = computed(() => decodeContact(phoneDisplayEncoded))
+
+const emailHref = computed(() => `mailto:${decodeContact(emailEncoded)}`)
+const phoneHref = computed(() => `tel:${decodeContact(phoneEncoded)}`)
+
+const handleEmailClick = () => {
+    window.location.href = emailHref.value
+}
+
+const handlePhoneClick = () => {
+    window.location.href = phoneHref.value
+}
 </script>

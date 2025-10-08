@@ -24,12 +24,12 @@
                         <p>{{ legalData.publisher.role }}</p>
                         <p>
                             Email :
-                            <a :href="`mailto:${legalData.publisher.email}`"
+                            <a :href="`mailto:${decodedEmail}`"
                                 class="text-primary-purple hover:text-primary-peach transition-colors">
-                                {{ legalData.publisher.email }}
+                                {{ decodedEmail }}
                             </a>
                         </p>
-                        <p>Téléphone : {{ legalData.publisher.phone }}</p>
+                        <p>Téléphone : {{ decodedPhone }}</p>
                     </div>
                 </section>
 
@@ -86,9 +86,9 @@
                         </ul>
                         <p>
                             {{ legalData.privacy.contact }}
-                            <a :href="`mailto:${legalData.publisher.email}`"
+                            <a :href="`mailto:${decodedEmail}`"
                                 class="text-primary-purple hover:text-primary-peach transition-colors">
-                                {{ legalData.publisher.email }}
+                                {{ decodedEmail }}
                             </a>
                         </p>
                     </div>
@@ -123,9 +123,9 @@
                         <p>{{ legalData.contactLegal.intro }}</p>
                         <p>
                             Email :
-                            <a :href="`mailto:${legalData.contactLegal.email}`"
+                            <a :href="`mailto:${decodedContactEmail}`"
                                 class="text-primary-purple hover:text-primary-peach transition-colors">
-                                {{ legalData.contactLegal.email }}
+                                {{ decodedContactEmail }}
                             </a>
                         </p>
                     </div>
@@ -153,6 +153,14 @@ const { locale } = useI18n()
 const legalData = computed(() => {
     return locale.value === 'fr' ? legalContentFr : legalContentEn
 })
+
+const decodeContact = (encoded) => {
+    return atob(encoded)
+}
+
+const decodedEmail = computed(() => decodeContact(legalData.value.publisher.email))
+const decodedPhone = computed(() => decodeContact(legalData.value.publisher.phone))
+const decodedContactEmail = computed(() => decodeContact(legalData.value.contactLegal.email))
 
 useHead({
     title: 'Mentions Légales - Juliette Cougnoux',
