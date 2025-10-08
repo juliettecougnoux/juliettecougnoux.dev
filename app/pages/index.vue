@@ -26,8 +26,11 @@
                         <div
                             class="absolute -bottom-8 -right-12 w-32 h-32 bg-primary-purple rounded-full opacity-70 blur-2xl" />
 
-                        <h1 class="text-6xl font-semibold text-primary-dark mb-6 relative leading-tight text-center">
+                        <h1
+                            class="text-7xl font-bold text-primary-dark mb-8 relative leading-tight text-center tracking-tight">
                             {{ $t('home.title') }}
+                            <div
+                                class="absolute -bottom-2 left-1/2 -translate-x-1/2 w-36 h-1 bg-primary-purple rounded-full" />
                             <svg class="absolute -top-40 md:-top-56 w-60 h-60 text-primary-purple opacity-30"
                                 viewBox="0 0 100 100">
                                 <path d="M 20,50 Q 40,10 60,50 T 100,50" fill="none" stroke="currentColor"
