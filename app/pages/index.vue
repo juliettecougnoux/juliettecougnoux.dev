@@ -28,7 +28,7 @@
 
                         <h1 class="text-6xl font-semibold text-primary-dark mb-6 relative leading-tight text-center">
                             {{ $t('home.title') }}
-                            <svg class="absolute -top-56 w-60 h-60 text-primary-purple opacity-30"
+                            <svg class="absolute -top-40 md:-top-56 w-60 h-60 text-primary-purple opacity-30"
                                 viewBox="0 0 100 100">
                                 <path d="M 20,50 Q 40,10 60,50 T 100,50" fill="none" stroke="currentColor"
                                     stroke-width="1" stroke-linecap="round" />
@@ -51,7 +51,7 @@
                         </div>
                     </div>
 
-                    <div class="relative">
+                    <div class="relative hidden md:block">
                         <div
                             class="w-full h-96 bg-gradient-to-br from-primary-peach via-primary-purple to-primary-green rounded-[60%_40%_30%_70%/60%_30%_70%_40%] blob shadow-2xl" />
 
@@ -86,8 +86,8 @@
                     </div>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-12 items-center mb-16">
-                    <div class="relative">
+                <div class="flex flex-col md:grid md:grid-cols-3 gap-12 items-center mb-16">
+                    <div class="relative w-72 h-72 mx-auto md:mx-0">
                         <div class="w-72 h-72 rounded-full overflow-hidden border-2 border-primary-green shadow-2xl">
                             <img src="/juliette-cougnoux.jpeg" alt="Photo de profile de Juliette Cougnoux"
                                 class="w-full h-full object-cover">
@@ -97,7 +97,7 @@
                     </div>
 
                     <div ref="aboutBox"
-                        class="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary-peach col-span-2">
+                        class="relative bg-white p-8 rounded-3xl shadow-xl border-2 border-primary-peach md:col-span-2">
                         <div class="absolute -top-4 -right-4 w-12 h-12 bg-primary-peach rounded-full opacity-70" />
                         <div class="absolute -bottom-3 -left-3 w-8 h-8 bg-primary-purple rounded-full opacity-60" />
 
@@ -106,7 +106,7 @@
                             <polygon points="50,10 89,73 11,73" fill="currentColor" />
                         </svg>
 
-                        <p class="text-lg text-primary-dark/90 leading-relaxed relative z-10 font-sans font-light whitespace-pre-line text-justify"
+                        <p class="text-lg text-primary-dark/90 leading-relaxed relative z-10 font-sans font-light whitespace-pre-line text-left md:text-justify"
                             v-html="$t('home.presentation.description')" />
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                 <div
                     class="relative bg-gradient-to-br from-primary-purple/10 to-primary-peach/10 p-8 rounded-3xl border-2 border-primary-purple">
                     <h3 class="text-2xl font-semibold text-primary-purple mb-4">{{ $t('home.about.title') }}</h3>
-                    <p class="text-lg text-primary-dark/90 leading-relaxed font-sans font-light whitespace-pre-line text-justify"
+                    <p class="text-lg text-primary-dark/90 leading-relaxed font-sans font-light whitespace-pre-line text-left md:text-justify"
                         v-html="$t('home.about.description')" />
                 </div>
             </div>
@@ -182,7 +182,7 @@
                                 {{ project.title }}
                             </h3>
                             <p
-                                class="text-primary-dark/70 mb-4 leading-relaxed font-sans text-sm font-light text-justify">
+                                class="text-primary-dark/70 mb-4 leading-relaxed font-sans text-sm font-light text-left md:text-justify">
                                 {{ project.description }}
                             </p>
                             <div class="flex flex-wrap gap-2 mb-6">
