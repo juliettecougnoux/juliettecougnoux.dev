@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "cv": "Resume",
+    "contact": "Contact",
+    "legal": "Legal notice"
+  },
+  "home": {
+    "title": "Juliette Cougnoux",
+    "subtitle": "Backend Engineer & Web Maker",
+    "about": {
+      "title": "About",
+      "description": "I work on backend projects built on <b>modular architectures</b> and technologies such as <b>Node.js, NestJS, GRPC, RabbitMQ, PostgreSQL, and MongoDB</b>. \n My background in digital communication taught me how to bridge technology and user needs, translate requirements into concrete solutions, and collaborate effectively within multidisciplinary teams. \n Today, my work follows a philosophy of <b>responsible engineering</b>, where code quality, documentation, and knowledge sharing are essential. \n My core values: <b>rigor, kindness, transparency, and curiosity</b>. \n Above all, I strive for continuous improvement and technical precision in every project I build."
+    },
+    "projects": {
+      "title": "Projects",
+      "view": "View project",
+      "ongoing": "Ongoing Projects"
+    },
+    "presentation": {
+      "title": "About me",
+      "description": "As an experienced backend developer, I design and maintain robust, scalable technical architectures. \nWith a degree in <b>Digital Communication</b> (EJCAM – Journalisme and Communication School of Aix-Marseille), I first worked at the crossroads of <b>communication strategy and web development</b>, where I developed a passion for structure, logic, and code precision. \nThis dual background — between creativity and engineering — shapes the way I approach development today: understanding users, thinking in terms of product, and delivering reliable code. \nI work on both <b>Node.js/NestJS microservices</b> and <b>custom WordPress sites</b>, always with the same focus on performance, clarity, and maintainability."
+    }
+  },
+  "cv": {
+    "title": "Resume",
+    "experience": "Work Experience",
+    "education": "Education",
+    "skills": "Skills",
+    "download": "Download Resume"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Have a question? An idea? Feel free to reach out, I'd love to exchange with you.",
+    "email": "Email",
+    "phone": "Phone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "gitlab": "GitLab"
+  },
+  "legal": {
+    "title": "Legal Notice",
+    "lastUpdated": "Last updated: January 8, 2025",
+    "backHome": "Back to home",
+    "publisher": "Website Publisher",
+    "hosting": "Hosting",
+    "hostingIntro": "This website is hosted by:",
+    "intellectual": "Intellectual Property",
+    "privacy": "Privacy & Personal Data",
+    "dataCollectedTitle": "Data collected:",
+    "cookies": "Cookies",
+    "contact": "Legal Questions Contact"
+  },
+  "websiteName": "juliettecougnoux.dev"
+}

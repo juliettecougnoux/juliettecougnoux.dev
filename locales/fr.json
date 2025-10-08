@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "cv": "CV",
+    "contact": "Contact",
+    "legal": "Mentions légales"
+  },
+  "home": {
+    "title": "Juliette Cougnoux",
+    "subtitle": "Backend Engineer & Web Maker",
+    "about": {
+      "title": "À propos",
+      "description": "Je travaille sur des projets backend reposant sur des <b>architectures distribuées</b> et des technologies telles que <b>Node.js, NestJS, GRPC, RabbitMQ, PostgreSQL et MongoDB</b>. \n Mon expérience en communication numérique m’a appris à articuler technique et usage, à traduire les besoins en solutions concrètes et à collaborer efficacement avec des équipes pluridisciplinaires. \n Aujourd’hui, mon rôle s’inscrit dans une logique d’<b>ingénierie responsable</b>, où qualité du code, documentation et transmission du savoir sont essentielles. \n Mes repères : <b>rigueur, bienveillance, transparence et curiosité</b>. \n Je recherche avant tout la progression continue et la justesse technique dans les projets que je construis."
+    },
+    "projects": {
+      "title": "Projets",
+      "view": "Voir le projet",
+      "ongoing": "Projets en cours"
+    },
+    "presentation": {
+      "title": "Qui suis-je ?",
+      "description": "Développeuse backend confirmée, je conçois et maintiens des architectures techniques robustes et scalables. \nFormée à la <b>communication numérique</b> (EJCAM – L’École de journalisme et de communication d'Aix-Marseille), j’ai d’abord évolué dans un environnement mêlant <b>stratégie de communication et développement web</b>, où j’ai développé un goût pour la structure, la logique et la précision du code. \nCette double compétence — entre expression et technique — forge aujourd’hui ma manière d’aborder le développement : comprendre l’utilisateur, penser produit, livrer du code fiable. \nJ’interviens aussi bien sur des <b>microservices Node.js/NestJS</b> que sur des <b>sites WordPress sur mesure</b>, avec la même exigence de performance, de clarté et de maintenabilité."
+    }
+  },
+  "cv": {
+    "title": "Curriculum Vitae",
+    "experience": "Expérience professionnelle",
+    "education": "Formation",
+    "skills": "Compétences",
+    "download": "Télécharger le CV"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Une question ? Une idée ? N'hésitez pas à me contacter, je serai ravie d'échanger avec vous.",
+    "email": "Email",
+    "phone": "Téléphone",
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "gitlab": "GitLab"
+  },
+  "legal": {
+    "title": "Mentions Légales",
+    "lastUpdated": "Dernière mise à jour : 8 janvier 2025",
+    "backHome": "Retour à l'accueil",
+    "publisher": "Éditeur du site",
+    "hosting": "Hébergement",
+    "hostingIntro": "Ce site est hébergé par :",
+    "intellectual": "Propriété intellectuelle",
+    "privacy": "Protection des données personnelles",
+    "dataCollectedTitle": "Données collectées :",
+    "cookies": "Cookies",
+    "contact": "Contact pour questions légales"
+  },
+  "websiteName": "juliettecougnoux.dev"
+}

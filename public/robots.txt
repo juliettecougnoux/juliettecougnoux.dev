@@ -1,0 +1,13 @@
+# robots.txt pour juliettecougnoux.dev
+# Tous les robots sont autorisés à crawler le site
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_nuxt/
+
+# Sitemap
+Sitemap: https://juliettecougnoux.dev/sitemap.xml
+
+# Crawl-delay pour éviter la surcharge
+Crawl-delay: 1
