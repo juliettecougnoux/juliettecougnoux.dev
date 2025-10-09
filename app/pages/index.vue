@@ -143,7 +143,8 @@
                             'shadow-[0_10px_40px_rgba(158,153,255,0.5)] hover:shadow-[0_20px_60px_rgba(158,153,255,0.7)]': index % 3 === 1,
                             'shadow-[0_10px_40px_rgba(170,255,153,0.5)] hover:shadow-[0_20px_60px_rgba(170,255,153,0.7)]': index % 3 === 2
                         }">
-                        <div class="absolute top-3 right-3 w-12 h-12 z-10 opacity-80">
+                        <div
+                            class="hidden md:block absolute top-3 right-3 w-12 h-12 z-10 opacity-80 pointer-events-none">
                             <svg viewBox="0 0 100 100" class="float drop-shadow-lg">
                                 <polygon v-if="index % 3 === 0" points="50,10 90,90 10,90" fill="#ffbe99" />
                                 <circle v-else-if="index % 3 === 1" cx="50" cy="50" r="40" fill="#9e99ff" />
@@ -233,7 +234,8 @@
                     <div class="flex flex-wrap gap-8 justify-center">
                         <div v-for="(project, index) in ongoingProjects" :key="index"
                             class="group relative bg-white rounded-3xl p-6 transition-all duration-300 hover:-translate-y-2 w-full max-w-sm shadow-[0_8px_30px_rgba(170,255,153,0.3)] hover:shadow-[0_12px_40px_rgba(170,255,153,0.5)]">
-                            <div class="absolute top-3 right-3 w-10 h-10 opacity-60">
+                            <div
+                                class="hidden md:block absolute top-3 right-3 w-10 h-10 opacity-60 pointer-events-none">
                                 <svg viewBox="0 0 100 100">
                                     <circle cx="50" cy="50" r="40" fill="#aaff99" />
                                 </svg>
