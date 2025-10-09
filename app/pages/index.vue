@@ -277,7 +277,6 @@ import { projects as projectsEn, ongoingProjects as ongoingProjectsEn } from '..
 const { locale } = useI18n()
 
 const subtitleBox = ref<HTMLElement | null>(null)
-const aboutBox = ref<HTMLElement | null>(null)
 
 onMounted(() => {
     const observerOptions = {
@@ -296,9 +295,6 @@ onMounted(() => {
 
     if (subtitleBox.value) {
         observer.observe(subtitleBox.value)
-    }
-    if (aboutBox.value) {
-        observer.observe(aboutBox.value)
     }
 })
 
