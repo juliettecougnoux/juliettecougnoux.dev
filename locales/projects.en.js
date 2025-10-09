@@ -13,6 +13,7 @@ export const projects = [
     link: "https://juliettecougnoux.dev/",
     image: "/projects/juliette-cougnoux.webp",
     isNew: true,
+    isPersonal: true,
   },
   {
     title: "Madagascar Island Tours",
@@ -60,6 +61,22 @@ export const projects = [
     technologies: ["WordPress", "Divi", "PHP", "JavaScript"],
     link: "https://equerre-finitions.fr/",
     image: "/projects/equerre-finitions.webp",
+  },
+  {
+    title: "victor-et-juliette.fr",
+    description:
+      "Wedding website with RSVP form connected to Google Sheets via Zapier for automatic guest management. Practical information (3-day schedule, accommodations, places to visit) and FAQ.",
+    technologies: [
+      "WordPress",
+      "Divi",
+      "PHP",
+      "JavaScript",
+      "Zapier",
+      "Google Sheets API",
+    ],
+    link: "https://victor-et-juliette.fr/",
+    image: "/projects/victor-et-juliette.webp",
+    isPersonal: true,
   },
 ];
 

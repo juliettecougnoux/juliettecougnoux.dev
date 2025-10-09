@@ -15,7 +15,8 @@
     "projects": {
       "title": "Projects",
       "view": "View project",
-      "ongoing": "Ongoing Projects"
+      "ongoing": "Ongoing Projects",
+      "personal": "Personal Project"
     },
     "presentation": {
       "title": "About me",

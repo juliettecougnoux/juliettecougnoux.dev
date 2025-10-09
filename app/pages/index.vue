@@ -151,6 +151,13 @@
                             </svg>
                         </div>
 
+                        <div v-if="project.isPersonal" class="absolute top-3 left-3 z-20">
+                            <span
+                                class="inline-block px-3 py-1.5 bg-primary-purple text-white text-xs font-medium rounded-full font-sans">
+                                {{ $t('home.projects.personal') }}
+                            </span>
+                        </div>
+
                         <div class="h-72 relative overflow-hidden border-b-4" :class="{
                             'border-primary-peach/30': index % 3 === 0,
                             'border-primary-purple/30': index % 3 === 1,
@@ -234,7 +241,7 @@
 
                             <div class="mb-3">
                                 <span
-                                    class="inline-block px-3 py-1 bg-primary-green/30 text-primary-dark text-xs font-medium rounded-full">
+                                    class="inline-block px-3 py-1 bg-primary-green text-primary-dark text-xs font-medium rounded-full">
                                     {{ project.status }}
                                 </span>
                             </div>
